@@ -1,18 +1,19 @@
-var monthChange = document.getElementById("monthButton");
-var dayChange = document.getElementById("dayButton");
-var dayText = document.getElementById("day");
-var monthText = document.getElementById("month");
+let monthChange = document.getElementById("monthButton");
+let dayChange = document.getElementById("dayButton");
+let dayText = document.getElementById("day");
+let monthText = document.getElementById("month");
 
-var daysOfweek = [ "Monday", "Tuesday", "Wednesday", "Thursday",
+let daysOfweek = [ "Monday", "Tuesday", "Wednesday", "Thursday",
 "Friday", "Saturday", "Sunday" ] 
-var namesOfmonths = [ "January", "February", "March", "April","May", "June", "July", "August","September", "October", "November", "December" ] ;
+let namesOfmonths = [ "January", "February", "March", "April","May", "June", "July", "August","September", "October", "November", "December" ] ;
 
-var dayIndex = 0; 
-var monthIndex = 0 ;
+let dayIndex = 0; 
+let monthIndex = 0 ;
 
 dayChange.addEventListener("click", function () {
     dayText.innerHTML = daysOfweek[dayIndex];
     dayIndex = (dayIndex + 1) % 7;
+    console.log(dayIndex)
 });
 
 monthChange.addEventListener("click", function () {
